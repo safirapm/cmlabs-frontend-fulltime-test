@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/* Component */
+import WebNavbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+// import Register from "./pages/Register/Register";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+/* Pages */
+import IngredientsList from "./pages/Ingredients/IngredientsList";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+/* Library */
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import reportWebVitals from "./reportWebVitals";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <WebNavbar />
+        <Outlet />
+        <Footer />
+      </>
+    ),
+    errorElement: "Page Not Found",
+    children: [
+      {
+        path: "/",
+        element: <IngredientsList />,
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={router} />);
+
 reportWebVitals();
