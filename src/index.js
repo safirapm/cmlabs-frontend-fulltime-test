@@ -1,10 +1,8 @@
 /* Component */
 import WebNavbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-// import Register from "./pages/Register/Register";
 
 /* Pages */
-import IngredientsList from "./pages/Ingredients/IngredientsList";
+import IngredientsList from "./pages/IngredientsList/IngredientsList";
 
 /* Library */
 import React from "react";
@@ -21,7 +19,6 @@ const router = createBrowserRouter([
       <>
         <WebNavbar />
         <Outlet />
-        <Footer />
       </>
     ),
     errorElement: "Page Not Found",
