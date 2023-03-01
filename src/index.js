@@ -3,6 +3,8 @@ import WebNavbar from "./components/Navbar/Navbar";
 
 /* Pages */
 import IngredientsList from "./pages/IngredientsList/IngredientsList";
+import IngredientsFilter from "./pages/IngredientsFilter/IngredientsFilter";
+import MealDetails from "./pages/MealDetails/MealDetails";
 
 /* Library */
 import React from "react";
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <IngredientsList />,
+      },
+      {
+        path: "/ingredients-detail/:i",
+        element: <IngredientsFilter />,
+      },
+      {
+        path: "/meal-details/:idMeal",
+        element: <MealDetails />,
       },
     ],
   },
