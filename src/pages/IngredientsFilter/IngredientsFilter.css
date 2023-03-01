@@ -1,3 +1,57 @@
-.ingfilter {
+.breadcrumb a {
+    color: #991717 !important;
+}
+
+.breadcrumb a:hover {
+    color: #4c1b1b !important;
+}
+
+.filter-section {
     padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-img {
+    max-width: 100%;
+    max-height: 100%;
+    
+}.filter-img {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.filter-img img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.filter-ing{
+    display:flex;
+    align-items: center !important;
+    background-color: #eddbc0a2;
+    color:#4c1b1b;
+    
+}
+
+.filter-ing:hover{
+    background: transparent;
+    color: transparent;
+    transition:0.5s ease;
+}
+
+.filter-ing h5{
+    display:flex;
+    justify-content: center;
+    font-family: 'General Sans', sans-serif;
+    font-weight: 600;
+}
+
+.filter-ing-title{
+    width: 100%;
+    text-align: center; 
 }
