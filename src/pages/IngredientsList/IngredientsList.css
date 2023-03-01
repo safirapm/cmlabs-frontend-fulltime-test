@@ -1,6 +1,135 @@
+.pd-10{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.container {
+    --bs-gutter-x:0 !important;
+}
+
 .ilist {
     min-height:100vh;
+    max-width: 100% !important;
+
     height:auto;
 
-    padding-top: 70px;
+    padding-top: 60px;
+}
+
+.ilist-header {
+    min-height: 60vh;
+    padding-left:20px;
+    padding-right:20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-image: linear-gradient(#3a1414cb, #bc493a90),url("../../img/pic-1.webp");
+}
+
+.ilist-header h2 {
+    font-family: 'General Sans', sans-serif;
+    font-weight: 600;
+    color: #EDDBC0;
+}
+
+.ilist-header label {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+
+    color: #EDDBC0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ilist-section {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ilist-section h5 {
+    font-family: 'General Sans', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+
+.ilist-all {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 20px; 
+}
+
+.ingredient-card{
+    position: relative;
+    border-radius: 4px;
+    border-top: solid 1px #B73E3E !important;
+    border-left: solid 1px #B73E3E !important;
+    border-bottom: solid 1px #B73E3E !important;
+    border-right: solid 1px #B73E3E !important;
+    transition: transform .5s ease;
+
+    align-items: center !important;
+
+}
+
+.ingredient-card:hover {
+    transform:scale(1.03);
+    box-shadow: 0 3px 20px #aba9a9;
+}
+
+.ilist-img {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.ilist-img img {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ingredient-card h5:hover {
+    color: #444;
+}
+
+.layer-ing{
+    background: transparent;
+    display:flex;
+    align-items: center !important;
+    padding:0px;
+
+    color: transparent;
+    transition:0.5s ease;
+}
+
+.layer-ing:hover{
+    background-color: #eddbc0a0;
+    color:#2f2f2f;
+}
+
+.layer-ing h5{
+    display:flex;
+    justify-content: center;
+}
+.layer-ing-title{
+    width: 100%;
+    text-align: center;
+    
 }
