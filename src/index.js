@@ -1,5 +1,6 @@
 /* Component */
 import WebNavbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 /* Pages */
 import IngredientsList from "./pages/IngredientsList/IngredientsList";
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       <>
         <WebNavbar />
         <Outlet />
+        <Footer />
       </>
     ),
     errorElement: "Page Not Found",
