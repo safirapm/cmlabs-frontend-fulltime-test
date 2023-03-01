@@ -1,11 +1,15 @@
 import axios from "axios";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import "./IngredientsList.css";
+import defaultImage from "../../img/pic-2.png";
 
 const IngredientsList = () => {
   const [allIng, setAllIng] = useState([]);
-  // const [browseMeals, setBrowseMeals] = useState("");
+
+  const onImageError = (e) => {
+    e.target.src = defaultImage;
+  };
 
   const getIngredients = () => {
     axios
@@ -28,16 +32,21 @@ const IngredientsList = () => {
         <div className="ilist-header">
           <h2>let's get cookin' and mealin'.</h2>
           <label htmlFor="site-search">look for ingredients here:</label>
-          <input
-            type="search"
-            id="site-search"
-            placeholder="type your ingredient"
-          ></input>
+          <div className="ilist-input">
+            <input
+              className="form-control"
+              type="search"
+              placeholder="type your ingredient..."
+            />
+          </div>
 
-          <Button type="submit">Search</Button>
+          <button className="btn btn-primary ilist-btn" type="submit">
+            search
+          </button>
         </div>
 
         <Container className="ilist-section" id="ingredient">
+          <h2>𓀁 list of ingredients 𓀁</h2>
           <h5>click any ingredients of your choice below!</h5>
           <Container className="ilist-all pd-10">
             {allIng.map((ing) => {
@@ -47,8 +56,13 @@ const IngredientsList = () => {
                     <div className="card ingredient-card">
                       <div className="ilist-img">
                         <img
-                          src={`${process.env.REACT_APP_BASEURL}images/ingredients/${ing.strIngredient}.png`}
+                          src={
+                            `${process.env.REACT_APP_BASEURL}images/ingredients/${ing.strIngredient}.png`
+                              ? `${process.env.REACT_APP_BASEURL}images/ingredients/${ing.strIngredient}.png`
+                              : defaultImage
+                          }
                           alt={ing.strIngredient}
+                          onError={onImageError}
                         />
                       </div>
                       <div className="card-img-overlay ingredient-overlay layer-ing">
