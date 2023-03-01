@@ -8,4 +8,4 @@ Created with the MealDB API, this website aims to explore recipes based on ingre
 3. react-router-dom
 
 ## Deployed Site (Netlify)
-https://www.mealin.netlify.app
+https://mealin.netlify.app/
