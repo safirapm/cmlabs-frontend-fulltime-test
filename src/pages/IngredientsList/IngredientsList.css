@@ -28,9 +28,8 @@
     align-items: center;
 
     max-width: 100%;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment:fixed;
     background-size:cover;
     background-image: linear-gradient(#3a1414cb, #bc493a90),url("../../img/pic-1.webp");
 }
