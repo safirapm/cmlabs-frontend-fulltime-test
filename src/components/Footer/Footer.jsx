@@ -8,7 +8,7 @@ function Footer() {
         <Container className="footer-container">
           <Row className="footer-row">
             <div className="footer-col">
-              <h4>Foodieasy</h4>
+              <h4>Mealin'</h4>
               <ul className="footer-ul text-light">
                 <li>About Us</li>
                 <li>Our Services</li>
@@ -22,7 +22,7 @@ function Footer() {
               <ul className="footer-ul text-light">
                 <li>FAQ</li>
                 <li>Subscriptions</li>
-                <li>How Foodieasy Works</li>
+                <li>How Mealin' Works</li>
                 <li>Cookie Preferences</li>
               </ul>
             </div>
